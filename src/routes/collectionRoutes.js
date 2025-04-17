@@ -12,7 +12,7 @@ const collectionRouter = express.Router();
 // collectionRouter.get("/:id", CollectionController.getCollectionsById);
 
 // // // POST /colecoes - Criar um novo Collections
-// collectionRouter.post("/", CollectionCntroller.createCollections);
+collectionRouter.post("/", CollectionController.createCollection);
 
 // // // PUT /colecoes/:id - Atualizar um Collections
 // collectionRouter.put("/:id", CollectionCntroller.updateCollections);
