@@ -75,7 +75,7 @@ class CollectionController {
         releaseYear,
       } = req.body;
 
-      // Atualizar o personagem
+      // Atualizar a colecao
       const updatedCollection = await CollectionModel.update(
         name,
         description,

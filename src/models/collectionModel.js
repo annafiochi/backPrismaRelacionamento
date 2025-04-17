@@ -7,6 +7,9 @@ class CollectionModel {
       orderBy: {
         createdAt: "desc",
       },
+      include:{
+        cards: true,
+      }
     });
 
     // console.log(colecoes);
@@ -43,19 +46,13 @@ class CollectionModel {
     return newCollection;
   }
 
-  // Atualizar um personagem
+  // Atualizar a colecao
   async update(
-    id,
-    title,
+    name,
     description,
-    episodes,
     releaseYear,
-    studio,
-    genres,
-    rating,
-    imageUrl
   ) {
-    const personagem = await this.findById(id);
+    const colecoes= await this.findById(id);
 
     if (!personagem) {
       return null;
